@@ -5,44 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forge — Autonomous Initiative Execution</title>
     <style>
-      :root{--bg:#060914;--panel:#0d152b;--line:#23396f;--text:#edf2ff;--muted:#b7c6f7;--accent:#6f8cff}
-      *{box-sizing:border-box} html,body{margin:0}
-      body{font-family:Inter,ui-sans-serif,system-ui;background:radial-gradient(1200px 700px at 15% -10%,#1f2f63 0%,transparent 55%),var(--bg);color:var(--text)}
-      .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 70px}
-      .hero{border:1px solid var(--line);background:linear-gradient(180deg,#111b36,#0a1124);padding:28px;border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
-      .kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-      h1{font-size:clamp(2.1rem,5vw,4.6rem);line-height:1.03;margin:10px 0 12px}
-      p{color:var(--muted);line-height:1.65}
-      .cta{display:inline-block;margin-top:14px;padding:12px 16px;border-radius:999px;text-decoration:none;background:var(--accent);color:#08112b;font-weight:700}
-      .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:16px}
-      .stat{border:1px solid #2c4178;background:#0d1733;padding:12px;border-radius:12px}.stat b{font-size:1.2rem}
-      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
-      .card{border:1px solid var(--line);background:#0b142b;padding:14px;border-radius:14px}
-      .card h3{margin:0 0 8px;font-size:1rem}
-      .proof{margin-top:14px;border:1px solid var(--line);background:#0b142b;padding:14px;border-radius:14px}
+      :root {
+        --bg: #090b14;
+        --panel: #12182b;
+        --line: #3b4b83;
+        --text: #eef2ff;
+        --muted: #bec8f3;
+        --accent: #93a4ff;
+        --accent-2: #67e7d8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      body {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(900px 480px at 7% -12%, #33468a55, transparent 55%),
+          radial-gradient(820px 520px at 92% 10%, #1a6f7a45, transparent 60%), var(--bg);
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 30px 20px 80px;
+      }
+      .hero {
+        border: 1px solid #4f62ad66;
+        border-radius: 24px;
+        padding: 30px;
+        background: linear-gradient(155deg, #182243, #0e1427 56%);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+      }
+      .kicker {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        font-size: clamp(2.3rem, 6vw, 4.9rem);
+        line-height: 0.96;
+        margin: 12px 0 14px;
+      }
+      p {
+        color: var(--muted);
+        line-height: 1.68;
+      }
+      .hero-copy {
+        max-width: 760px;
+        font-size: 1.06rem;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .cta {
+        display: inline-block;
+        border-radius: 999px;
+        text-decoration: none;
+        padding: 12px 16px;
+        font-weight: 700;
+      }
+      .cta-primary {
+        background: linear-gradient(135deg, var(--accent), #b7c0ff);
+        color: #0d1430;
+      }
+      .cta-secondary {
+        color: var(--text);
+        border: 1px solid #8092d666;
+        background: #111935;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .stat {
+        border: 1px solid #475da966;
+        border-radius: 12px;
+        padding: 12px;
+        background: #101a36;
+      }
+      .stat b {
+        font-size: 1.15rem;
+      }
+      .manifesto {
+        margin-top: 14px;
+        border: 1px solid #3f559f66;
+        border-radius: 16px;
+        background: #10182f;
+        padding: 14px;
+      }
+      .manifesto strong {
+        color: var(--accent-2);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .card {
+        border: 1px solid #44599866;
+        border-radius: 16px;
+        background: #10172e;
+        padding: 15px;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+      .proof {
+        margin-top: 14px;
+        border: 1px solid #5264a166;
+        background: linear-gradient(145deg, #121932, #0d1327);
+        padding: 15px;
+        border-radius: 16px;
+      }
+      .proof strong {
+        color: #d4ddff;
+      }
     </style>
   </head>
   <body>
     <main class="wrap">
       <section class="hero">
         <div class="kicker">Forge • Hoffner Systems</div>
-        <h1>From directive to merged output.</h1>
-        <p>Forge turns engineering objectives into auditable execution: planned work, policy-gated changes, and reliable delivery loops across GitHub and self-hosted GitLab.</p>
-        <a class="cta" href="mailto:matt@hoffnersystems.com?subject=Forge%20Pilot">Start Forge Pilot</a>
+        <h1>From directive to deployed output.</h1>
+        <p class="hero-copy">
+          Forge is for engineering teams that want autonomous execution without losing
+          control. It translates intent into scoped work, policy-gated changes, and
+          auditable delivery loops your operators can actually trust.
+        </p>
+
+        <div class="cta-row">
+          <a class="cta cta-primary" href="mailto:matt@hoffnersystems.com?subject=Forge%20Pilot">
+            Start Forge Pilot
+          </a>
+          <a class="cta cta-secondary" href="mailto:matt@hoffnersystems.com?subject=Forge%20Demo%20Questions">
+            Ask technical questions
+          </a>
+        </div>
+
         <div class="stats">
           <div class="stat"><b>&lt; 60s</b><div>target blocker → next action</div></div>
           <div class="stat"><b>3 modes</b><div>Pro / Mad Max / Insane control</div></div>
           <div class="stat"><b>100%</b><div>run-level artifact traceability</div></div>
         </div>
+
+        <div class="manifesto">
+          <strong>Forge posture:</strong>
+          <p>
+            We are not selling “agent vibes.” We are selling accountable throughput.
+            Faster cycle time, explicit policy rails, and fewer meetings spent guessing.
+          </p>
+        </div>
       </section>
+
       <section class="grid">
-        <article class="card"><h3>Operator control</h3><p>Humans stay in command with clear intervention points, not mystery automation.</p></article>
-        <article class="card"><h3>Production governance</h3><p>Policy and approval rails are part of the runtime, not patched in after incidents.</p></article>
-        <article class="card"><h3>Execution reliability</h3><p>Structured status, alerts, and remediation paths keep delivery on track under pressure.</p></article>
+        <article class="card">
+          <h3>Operator control</h3>
+          <p>Humans stay in charge with clear intervention points and explicit run state.</p>
+        </article>
+        <article class="card">
+          <h3>Policy as runtime</h3>
+          <p>Governance is enforced inside execution, not bolted on after incidents.</p>
+        </article>
+        <article class="card">
+          <h3>Execution reliability</h3>
+          <p>Alerts, remediation paths, and auditable trails keep delivery stable under pressure.</p>
+        </article>
       </section>
+
       <section class="proof">
         <strong>Why teams move now</strong>
-        <p>Engineering orgs can’t scale by adding more PM docs and review meetings. Forge compresses planning-to-shipping cycles while preserving accountability.</p>
+        <p>
+          Headcount and process docs are no longer enough. Forge compresses
+          planning-to-shipping loops while preserving safety, accountability, and operator confidence.
+        </p>
       </section>
     </main>
   </body>
