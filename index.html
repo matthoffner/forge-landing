@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forge — Autonomous Initiative Execution</title>
+    <title>Forge — Your AI teammate for shipping faster</title>
     <style>
       :root {
         --bg: #090b14;
@@ -132,17 +132,46 @@
       .proof strong {
         color: #d4ddff;
       }
+      .offers {
+        margin-top: 14px;
+        border: 1px solid #5264a166;
+        border-radius: 16px;
+        background: #0e152c;
+        padding: 15px;
+      }
+      .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .offer {
+        border: 1px solid #41538f66;
+        border-radius: 12px;
+        background: #121b36;
+        padding: 12px;
+      }
+      .offer .price {
+        font-size: 1.45rem;
+        font-weight: 800;
+        margin: 6px 0;
+      }
+      .offer ul {
+        margin: 8px 0 0;
+        padding-left: 16px;
+        color: var(--muted);
+      }
     </style>
   </head>
   <body>
     <main class="wrap">
       <section class="hero">
         <div class="kicker">Forge • Hoffner Systems</div>
-        <h1>From directive to deployed output.</h1>
+        <h1>Turn ideas into shipped work.</h1>
         <p class="hero-copy">
-          Forge is for engineering teams that want autonomous execution without losing
-          control. It translates intent into scoped work, policy-gated changes, and
-          auditable delivery loops your operators can actually trust.
+          Forge is an AI teammate for founders and product teams. Give it a goal,
+          and it helps you turn that goal into clear tasks, shipped changes,
+          and faster weekly momentum.
         </p>
 
         <div class="cta-row">
@@ -150,7 +179,7 @@
             Start Forge Pilot
           </a>
           <a class="cta cta-secondary" href="mailto:matt@hoffnersystems.com?subject=Forge%20Demo%20Questions">
-            Ask technical questions
+            See a live demo
           </a>
         </div>
 
@@ -161,26 +190,26 @@
         </div>
 
         <div class="manifesto">
-          <strong>Forge posture:</strong>
+          <strong>What you actually get:</strong>
           <p>
-            We are not selling “agent vibes.” We are selling accountable throughput.
-            Faster cycle time, explicit policy rails, and fewer meetings spent guessing.
+            Less status-meeting overhead, clearer ownership, and more customer-visible
+            work shipped every week.
           </p>
         </div>
       </section>
 
       <section class="grid">
         <article class="card">
-          <h3>Operator control</h3>
-          <p>Humans stay in charge with clear intervention points and explicit run state.</p>
+          <h3>Clear ownership</h3>
+          <p>Everyone knows what is next, who owns it, and what “done” means.</p>
         </article>
         <article class="card">
-          <h3>Policy as runtime</h3>
-          <p>Governance is enforced inside execution, not bolted on after incidents.</p>
+          <h3>Fast execution</h3>
+          <p>Ship more each week without adding headcount or heavier process.</p>
         </article>
         <article class="card">
-          <h3>Execution reliability</h3>
-          <p>Alerts, remediation paths, and auditable trails keep delivery stable under pressure.</p>
+          <h3>Built-in control</h3>
+          <p>You choose speed vs review depth so automation never feels out of control.</p>
         </article>
       </section>
 
@@ -190,6 +219,42 @@
           Headcount and process docs are no longer enough. Forge compresses
           planning-to-shipping loops while preserving safety, accountability, and operator confidence.
         </p>
+      </section>
+
+      <section class="offers">
+        <strong>Start with a packaged engagement</strong>
+        <p>
+          Pick speed + risk posture first. Expand after we prove measurable output.
+        </p>
+        <div class="offer-grid">
+          <article class="offer">
+            <h3>Pilot Sprint</h3>
+            <div class="price">$4,800 · 14 days</div>
+            <ul>
+              <li>One constrained workflow in production</li>
+              <li>Policy guardrails + intervention map</li>
+              <li>Operator handoff + weekly KPI snapshot</li>
+            </ul>
+          </article>
+          <article class="offer">
+            <h3>Revenue Throughput Program</h3>
+            <div class="price">$7,500 / month</div>
+            <ul>
+              <li>Two parallel automations with monthly tuning</li>
+              <li>Pipeline velocity and handoff reliability targets</li>
+              <li>Priority support for incidents and rollout blocks</li>
+            </ul>
+          </article>
+          <article class="offer">
+            <h3>Enterprise Control Plane</h3>
+            <div class="price">Custom</div>
+            <ul>
+              <li>Multi-team rollout with governance requirements</li>
+              <li>Audit-ready run logs + policy review cadence</li>
+              <li>Exec reporting tied to delivery KPIs</li>
+            </ul>
+          </article>
+        </div>
       </section>
     </main>
   </body>
